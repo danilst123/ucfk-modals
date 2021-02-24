@@ -1,0 +1,50 @@
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & + li {
+      margin-top: 9px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+
+      &,
+      &:hover,
+      &:active,
+      &:visited,
+      &:focus {
+        font-family: @roboto_font;
+        font-size: 13px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 20px;
+        letter-spacing: normal;
+        text-align: left;
+        color: #437fd1;
+        text-decoration: underline;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+
+      img {
+        height: 18px;
+        width: auto;
+        margin-right: 7px;
+      }
+    }
+
+    .status-label {
+      margin-left: 6px;
+    }
+  }
+}
