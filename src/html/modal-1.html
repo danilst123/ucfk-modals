@@ -19,12 +19,77 @@
           </h5>
           <div class="modal__close"></div>
         </div>
-        <div class="modal__body">
+        <div id="modalBody" class="modal__body">
           <section class="accordion">
             <h3 class="accordion__head">Запрос на получения сертификата</h3>
             <div class="accordion__body">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
               quaerat.
+            </div>
+          </section>
+          <section class="accordion">
+            <h3 class="accordion__head">Запрос на получения сертификата 2</h3>
+            <div class="accordion__body">
+              <div id="pageble-block" class="pageble-block">
+                <img src="../img/preview.png" alt="" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                mollitia dolorem earum quidem cumque quis eveniet. Quaerat
+                dolorem odit minima expedita ut minus sequi ad autem, maxime
+                natus nam veniam pariatur corporis excepturi non harum hic
+                obcaecati optio error ipsa. Vero qui culpa est optio deleniti
+                porro! Reiciendis facilis nostrum velit itaque autem amet magni
+                doloremque alias commodi, assumenda excepturi inventore
+                reprehenderit maiores deleniti, omnis, non repudiandae ad!
+                Doloribus odit dicta repudiandae natus cum ipsam atque. Impedit
+                voluptas culpa asperiores.
+              </div>
+              <ul class="paging">
+                <li class="paging__nav">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15.844"
+                    height="15.844"
+                    viewBox="0 0 15.844 15.844"
+                  >
+                    <path
+                      id="иконка"
+                      class="cls-1"
+                      fill="#b5b8c0"
+                      fill-rule="evenodd"
+                      d="M506.016,835.016l5.484-5.532-1.406-1.406L502.172,836l7.922,7.922,1.406-1.406-5.484-5.532h12v-1.968h-12Z"
+                      transform="translate(-502.156 -828.062)"
+                    />
+                  </svg>
+                </li>
+                <li class="paging__links">
+                  <a href="" class="paging__link paging__link--current"
+                    ><span>1</span></a
+                  >
+                  <a href="" class="paging__link"><span>2</span></a>
+                  <a href="" class="paging__link"><span>3</span></a>
+                  <a href="" class="paging__link"><span>4</span></a>
+                  <span class="paging__ellipsis">...</span>
+                  <a href="" class="paging__link"><span>38</span></a>
+                </li>
+                <li class="paging__nav paging__nav--active">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15.843"
+                    height="15.844"
+                    viewBox="0 0 15.843 15.844"
+                  >
+                    <path
+                      id="иконка"
+                      class="cls-1"
+                      fill="#b5b8c0"
+                      fill-rule="evenodd"
+                      d="M695.984,835.016l-5.484-5.532,1.406-1.406L699.828,836l-7.922,7.922-1.406-1.406,5.484-5.532h-12v-1.968h12Z"
+                      transform="translate(-683.969 -828.062)"
+                    />
+                  </svg>
+                </li>
+              </ul>
+
               <ul class="file-list">
                 <li>
                   <a href="">
@@ -67,13 +132,6 @@
               </ul>
             </div>
           </section>
-          <section class="accordion">
-            <h3 class="accordion__head">Запрос на получения сертификата 2</h3>
-            <div class="accordion__body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-              quaerat.
-            </div>
-          </section>
         </div>
         <div class="modal__footer">
           <button class="btn" data-type="secondary">Отмена</button>
@@ -81,5 +139,47 @@
         </div>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"></script>
+    <script>
+      $(function () {
+        function triggerWinResize(timeout) {
+          setTimeout(function () {
+            // For a full list of event types: https://developer.mozilla.org/en-US/docs/Web/API/document.createEvent
+            var el = window; // This can be your element on which to trigger the event
+            var event = document.createEvent("HTMLEvents");
+
+            event.initEvent("resize", true, false);
+            el.dispatchEvent(event);
+          }, timeout);
+        }
+
+        $(".accordion__head").click(function (e) {
+          e.preventDefault();
+
+          $(this)
+            .next()
+            .slideToggle(400)
+            .parent()
+            .toggleClass("accordion--expanded");
+
+          triggerWinResize(450);
+        });
+
+        setTimeout(function () {
+          var $pagebleBlock = document.querySelector("#pageble-block");
+          var $modalBody = document.querySelector("#modalBody");
+
+          var psPagebleBlock = new PerfectScrollbar($pagebleBlock);
+          var psModalBody = new PerfectScrollbar($modalBody);
+
+          $(window).resize(function () {
+            psPagebleBlock.update();
+            psModalBody.update();
+          });
+        }, 100);
+      });
+    </script>
   </body>
 </html>
