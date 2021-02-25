@@ -1,0 +1,23 @@
+.choose-block {
+  &__item {
+    display: block;
+    cursor: pointer;
+  }
+
+  &__item + &__item {
+    margin-top: 7px;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .certificate-card {
+      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.17);
+      background-color: #ffffff;
+
+      &:before {
+        background: #427ac0;
+      }
+    }
+  }
+}

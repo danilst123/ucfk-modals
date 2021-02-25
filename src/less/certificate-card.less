@@ -1,0 +1,55 @@
+.certificate-card {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.07);
+  background-color: #f3f3f3;
+  position: relative;
+  padding: 26px 35px;
+  transition: background 0.3s;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: transparent;
+    transition: background 0.3s;
+  }
+
+  &__name {
+    font-family: @main_font;
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2d2d2d;
+    margin: 0 0 15px;
+  }
+
+  &__info {
+    font-family: @roboto_font;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #010101;
+
+    td {
+      &:first-child {
+        color: #a8a8a8;
+        padding-right: 12px;
+      }
+    }
+  }
+}

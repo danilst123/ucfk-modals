@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal 2</title>
+
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <section class="modal">
+      <div class="modal__bg"></div>
+      <div class="modal__box" style="width: 600px">
+        <div class="modal__head">
+          <h2 class="modal__title">Выберите сертификат</h2>
+          <div class="modal__close"></div>
+        </div>
+        <div id="modalBody" class="modal__body">
+          <section class="choose-block">
+            <label class="choose-block__item">
+              <input class="choose-block__input" type="radio" name="choose" />
+              <div class="certificate-card certificate-card--active">
+                <h3 class="certificate-card__name">Иванов Иван Иванович</h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>29.01.2021</td>
+                  </tr>
+                </table>
+              </div>
+            </label>
+            <label class="choose-block__item">
+              <input
+                class="choose-block__input"
+                type="radio"
+                name="choose"
+                checked
+              />
+              <div class="certificate-card">
+                <h3 class="certificate-card__name">
+                  Сергеев Александр Константинович
+                </h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>15.01.2021</td>
+                  </tr>
+                </table>
+              </div>
+            </label>
+            <label class="choose-block__item">
+              <input class="choose-block__input" type="radio" name="choose" />
+              <div class="certificate-card certificate-card--active">
+                <h3 class="certificate-card__name">Иванов Иван Иванович</h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>29.01.2021</td>
+                  </tr>
+                </table>
+              </div>
+            </label>
+          </section>
+        </div>
+        <div class="modal__footer">
+          <button class="btn" data-type="secondary">Отмена</button>
+          <button class="btn" data-type="primary">Подписать ЭП</button>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"></script>
+    <script>
+      $(function () {
+        function triggerWinResize(timeout) {
+          setTimeout(function () {
+            // For a full list of event types: https://developer.mozilla.org/en-US/docs/Web/API/document.createEvent
+            var el = window; // This can be your element on which to trigger the event
+            var event = document.createEvent("HTMLEvents");
+
+            event.initEvent("resize", true, false);
+            el.dispatchEvent(event);
+          }, timeout);
+        }
+
+        $(".modal__bg, .modal__close").click(function (e) {
+          e.preventDefault();
+          $(this).closest(".modal").fadeToggle(400);
+        });
+
+        setTimeout(function () {
+          var $modalBody = document.querySelector("#modalBody");
+          var psModalBody = new PerfectScrollbar($modalBody);
+
+          $(window).resize(function () {
+            psModalBody.update();
+          });
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
