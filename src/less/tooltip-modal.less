@@ -1,0 +1,37 @@
+.tooltip-modal {
+  border-radius: 8px;
+  box-shadow: 0px 2px 13px 0 rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  padding: 15px 26px;
+  position: fixed;
+  display: none;
+  z-index: 20000;
+  top: 0;
+  left: 0;
+
+  & > * + * {
+    margin-top: 10px;
+  }
+
+  &__title {
+    font-family: @roboto_font;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    margin: 0;
+  }
+
+  &__btn.btn {
+    height: 30px;
+    min-width: auto;
+    font-size: 13px;
+    line-height: 30px;
+    font-family: @roboto_font;
+    padding: 0 12px;
+  }
+}

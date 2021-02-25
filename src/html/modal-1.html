@@ -89,23 +89,49 @@
                   </svg>
                 </li>
               </ul>
-
               <ul class="file-list">
                 <li>
-                  <a href="">
-                    <img src="../img/file-pdf.svg" alt="" />
-                    <span>Запрос на сертификат</span>
-                  </a>
+                  <div class="file-list__content">
+                    <a href="">
+                      <img src="../img/file-pdf.svg" alt="" />
+                      <span>Запрос на сертификат</span>
+                    </a>
+                    <div class="tooltip-modal">
+                      <h3 class="tooltip-modal__title">
+                        Хотели бы вы проверить хэш-сумму <br />
+                        файла перед просмотром?
+                      </h3>
+                      <button
+                        class="tooltip-modal__btn btn"
+                        data-type="primary"
+                      >
+                        Да, проверить
+                      </button>
+                      <a href="" class="tooltip-modal__link"
+                        >Просмотреть без проверки</a
+                      >
+                    </div>
+                  </div>
                   <span class="status-label">Не проверен</span>
                 </li>
                 <li>
-                  <a href="">
-                    <img src="../img/file-pic.svg" alt="" />
-                    <span
-                      >Документы или сведения, подтверждающие полномочия
-                      получателя сертификата</span
-                    >
-                  </a>
+                  <div class="file-list__content">
+                    <a href="">
+                      <img src="../img/file-pic.svg" alt="" />
+                      <span
+                        >Документы или сведения, подтверждающие полномочия
+                        получателя сертификата</span
+                      >
+                    </a>
+                    <div class="tooltip-modal">
+                      <h3 class="tooltip-modal__title">
+                        Идет процесс сравнения хэш-суммы файла
+                      </h3>
+                      <div class="tooltip-modal__loader">
+                        <div class="loader" data-load="82"></div>
+                      </div>
+                    </div>
+                  </div>
                   <span class="status-label">
                     <img src="../img/reload.svg" alt="" />Идет проверка</span
                   >
@@ -120,16 +146,30 @@
                   >
                 </li>
                 <li>
-                  <a href="">
-                    <img src="../img/file-others.svg" alt="" />
-                    <span>Другие данные</span>
-                  </a>
+                  <div class="file-list__content">
+                    <a href="">
+                      <img src="../img/file-others.svg" alt="" />
+                      <span>Другие данные</span>
+                    </a>
+                    <div class="tooltip-modal">
+                      <h3 class="tooltip-modal__title">
+                        Хэш-сумма файла не совпали
+                      </h3>
+                    </div>
+                  </div>
                   <span class="status-label" data-status="error">
                     <img src="../img/info.svg" alt="" />
                     Ошибка</span
                   >
                 </li>
               </ul>
+            </div>
+          </section>
+          <section class="accordion">
+            <h3 class="accordion__head">Запрос на формирование доверенности</h3>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              quaerat.
             </div>
           </section>
         </div>
@@ -166,6 +206,38 @@
 
           triggerWinResize(450);
         });
+
+        $(".modal__bg, .modal__close").click(function (e) {
+          e.preventDefault();
+          $(this).closest(".modal").fadeToggle(400);
+        });
+
+        $(".file-list__content").hover(
+          function (event) {
+            // over
+            var $target = $(this);
+            var $tooltip = $target.find(".tooltip-modal");
+
+            var position = {
+              y: $target[0].getBoundingClientRect().y,
+              x: event.originalEvent.pageX,
+            };
+
+            $tooltip
+              .css({
+                top: position.y + $target.height() + "px",
+                left: position.x - 50 + "px",
+              })
+              .fadeIn(300);
+          },
+          function (event) {
+            // out
+            var $target = $(this);
+            var $tooltip = $target.find(".tooltip-modal");
+
+            $tooltip.fadeOut(300);
+          }
+        );
 
         setTimeout(function () {
           var $pagebleBlock = document.querySelector("#pageble-block");
