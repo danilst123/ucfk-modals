@@ -19,7 +19,7 @@
           </h5>
           <div class="modal__close"></div>
         </div>
-        <div id="modalBody" class="modal__body">
+        <div class="modal__body">
           <section class="accordion">
             <h3 class="accordion__head">Запрос на получения сертификата</h3>
             <div class="accordion__body">
@@ -249,14 +249,14 @@
 
         setTimeout(function () {
           var $pagebleBlock = document.querySelector("#pageble-block");
-          var $modalBody = document.querySelector("#modalBody");
+          var $modal = document.querySelector(".modal");
 
           var psPagebleBlock = new PerfectScrollbar($pagebleBlock);
-          var psModalBody = new PerfectScrollbar($modalBody);
+          var psModal = new PerfectScrollbar($modal);
 
           $(window).resize(function () {
             psPagebleBlock.update();
-            psModalBody.update();
+            psModal.update();
           });
         }, 100);
       });

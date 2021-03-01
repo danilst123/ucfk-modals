@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal 1</title>
+
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <section class="modal">
+      <div class="modal__bg"></div>
+      <div class="modal__box" style="width: 940px">
+        <div class="modal__head">
+          <h2 class="modal__title">Подписание документов</h2>
+          <h5 class="modal__subtitle">
+            Сформированы следующие документы для подписания
+          </h5>
+          <div class="modal__close"></div>
+        </div>
+        <div class="modal__body">
+          <section class="accordion-count">
+            <h2 class="accordion-count__head">
+              Для подписания: <span>8</span>
+            </h2>
+            <div class="accordion-count__body">
+              <section class="accordion accordion--disabled">
+                <h3 class="accordion__head">1. Комплект №10</h3>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dicta, quaerat.
+                </div>
+                <div class="accordion__status">
+                  <div class="process-loader">
+                    <span class="process-loader__scale">
+                      <span
+                        class="process-loader__progress"
+                        style="width: 82%; background-color: #a2c234"
+                      ></span>
+                    </span>
+                    <p class="process-loader__count">
+                      Идет обработка: <strong><span>82</span>%</strong>
+                    </p>
+                  </div>
+                </div>
+                <span class="accordion__close" title="Закрыть"></span>
+              </section>
+              <section class="accordion">
+                <h3 class="accordion__head">2. Комплект №11</h3>
+                <div class="accordion__body">
+                  <div id="pageble-block" class="pageble-block">
+                    <img src="../img/preview.png" alt="" />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus mollitia dolorem earum quidem cumque quis eveniet.
+                    Quaerat dolorem odit minima expedita ut minus sequi ad
+                    autem, maxime natus nam veniam pariatur corporis excepturi
+                    non harum hic obcaecati optio error ipsa. Vero qui culpa est
+                    optio deleniti porro! Reiciendis facilis nostrum velit
+                    itaque autem amet magni doloremque alias commodi, assumenda
+                    excepturi inventore reprehenderit maiores deleniti, omnis,
+                    non repudiandae ad! Doloribus odit dicta repudiandae natus
+                    cum ipsam atque. Impedit voluptas culpa asperiores.
+                  </div>
+                  <ul class="paging">
+                    <li class="paging__nav">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15.844"
+                        height="15.844"
+                        viewBox="0 0 15.844 15.844"
+                      >
+                        <path
+                          id="иконка"
+                          class="cls-1"
+                          fill="#b5b8c0"
+                          fill-rule="evenodd"
+                          d="M506.016,835.016l5.484-5.532-1.406-1.406L502.172,836l7.922,7.922,1.406-1.406-5.484-5.532h12v-1.968h-12Z"
+                          transform="translate(-502.156 -828.062)"
+                        />
+                      </svg>
+                    </li>
+                    <li class="paging__links">
+                      <a href="" class="paging__link paging__link--current"
+                        ><span>1</span></a
+                      >
+                      <a href="" class="paging__link"><span>2</span></a>
+                      <a href="" class="paging__link"><span>3</span></a>
+                      <a href="" class="paging__link"><span>4</span></a>
+                      <span class="paging__ellipsis">...</span>
+                      <a href="" class="paging__link"><span>38</span></a>
+                    </li>
+                    <li class="paging__nav paging__nav--active">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15.843"
+                        height="15.844"
+                        viewBox="0 0 15.843 15.844"
+                      >
+                        <path
+                          id="иконка"
+                          class="cls-1"
+                          fill="#b5b8c0"
+                          fill-rule="evenodd"
+                          d="M695.984,835.016l-5.484-5.532,1.406-1.406L699.828,836l-7.922,7.922-1.406-1.406,5.484-5.532h-12v-1.968h12Z"
+                          transform="translate(-683.969 -828.062)"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                  <ul class="file-list">
+                    <li>
+                      <div class="file-list__content">
+                        <a href="">
+                          <img src="../img/file-pdf.svg" alt="" />
+                          <span>Запрос на сертификат</span>
+                        </a>
+                        <div class="tooltip-modal">
+                          <h3 class="tooltip-modal__title">
+                            Хотели бы вы проверить хэш-сумму <br />
+                            файла перед просмотром?
+                          </h3>
+                          <button
+                            class="tooltip-modal__btn btn"
+                            data-type="primary"
+                          >
+                            Да, проверить
+                          </button>
+                          <a href="" class="tooltip-modal__link"
+                            >Просмотреть без проверки</a
+                          >
+                        </div>
+                      </div>
+                      <span class="status-label">Не проверен</span>
+                    </li>
+                    <li>
+                      <div class="file-list__content">
+                        <a href="">
+                          <img src="../img/file-pic.svg" alt="" />
+                          <span
+                            >Документы или сведения, подтверждающие полномочия
+                            получателя сертификата</span
+                          >
+                        </a>
+                        <div class="tooltip-modal">
+                          <h3 class="tooltip-modal__title">
+                            Идет процесс сравнения хэш-суммы файла
+                          </h3>
+                          <div class="tooltip-modal__loader">
+                            <div class="process-loader">
+                              <span class="process-loader__scale">
+                                <span
+                                  class="process-loader__progress"
+                                  style="width: 82%"
+                                ></span>
+                              </span>
+                              <p class="process-loader__count">
+                                <span>82</span>%
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="status-label">
+                        <img src="../img/reload.svg" alt="" />Идет
+                        проверка</span
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <img src="../img/file-others.svg" alt="" />
+                        <span>Паспортные данные</span>
+                      </a>
+                      <span class="status-label" data-status="complete"
+                        >Проверен</span
+                      >
+                    </li>
+                    <li>
+                      <div class="file-list__content">
+                        <a href="">
+                          <img src="../img/file-others.svg" alt="" />
+                          <span>Другие данные</span>
+                        </a>
+                        <div class="tooltip-modal">
+                          <h3 class="tooltip-modal__title">
+                            Хэш-сумма файла не совпали
+                          </h3>
+                        </div>
+                      </div>
+                      <span class="status-label" data-status="error">
+                        <img src="../img/info.svg" alt="" />
+                        Ошибка</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="accordion__status">
+                  <span class="status-label" data-status="complete">
+                    Готов к подписанию
+                  </span>
+                </div>
+                <span class="accordion__close" title="Закрыть"></span>
+              </section>
+              <section class="accordion accordion--disabled">
+                <h3 class="accordion__head">3. Комплект №12</h3>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dicta, quaerat.
+                </div>
+                <div class="accordion__status">
+                  <div class="process-loader">
+                    <span class="process-loader__scale">
+                      <span
+                        class="process-loader__progress"
+                        style="width: 13%; background-color: #f3b01f"
+                      ></span>
+                    </span>
+                    <p class="process-loader__count">
+                      Идет обработка: <strong><span>13</span>%</strong>
+                    </p>
+                  </div>
+                </div>
+                <span class="accordion__close" title="Закрыть"></span>
+              </section>
+              <section class="accordion">
+                <h3 class="accordion__head">4. Комплект №13</h3>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dicta, quaerat.
+                </div>
+                <div class="accordion__status">
+                  <span class="status-label" data-status="complete">
+                    Готов к подписанию
+                  </span>
+                </div>
+                <span class="accordion__close" title="Закрыть"></span>
+              </section>
+              <section class="accordion">
+                <h3 class="accordion__head">5. Комплект №14</h3>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dicta, quaerat.
+                </div>
+                <div class="accordion__status">
+                  <span class="status-label" data-status="complete">
+                    Готов к подписанию
+                  </span>
+                </div>
+                <span class="accordion__close" title="Закрыть"></span>
+              </section>
+              <section class="accordion accordion--disabled">
+                <h3 class="accordion__head">6. Комплект №15</h3>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dicta, quaerat.
+                </div>
+                <div class="accordion__status">
+                  <div class="process-loader">
+                    <span class="process-loader__scale">
+                      <span
+                        class="process-loader__progress"
+                        style="width: 57%; background-color: #dbd357"
+                      ></span>
+                    </span>
+                    <p class="process-loader__count">
+                      Идет обработка: <strong><span>57</span>%</strong>
+                    </p>
+                  </div>
+                </div>
+                <span class="accordion__close" title="Закрыть"></span>
+              </section>
+              <section class="accordion accordion--disabled">
+                <h3 class="accordion__head">7. Комплект №16</h3>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dicta, quaerat.
+                </div>
+                <div class="accordion__status">
+                  <div class="process-loader">
+                    <span class="process-loader__scale">
+                      <span
+                        class="process-loader__progress"
+                        style="width: 75%; background-color: #cad947"
+                      ></span>
+                    </span>
+                    <p class="process-loader__count">
+                      Идет обработка: <strong><span>75</span>%</strong>
+                    </p>
+                  </div>
+                </div>
+                <span class="accordion__close" title="Закрыть"></span>
+              </section>
+              <section class="accordion accordion--disabled">
+                <h3 class="accordion__head">8. Комплект №17</h3>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dicta, quaerat.
+                </div>
+                <div class="accordion__status">
+                  <div class="process-loader">
+                    <span class="process-loader__scale">
+                      <span
+                        class="process-loader__progress"
+                        style="width: 98%; background-color: #a2c234"
+                      ></span>
+                    </span>
+                    <p class="process-loader__count">
+                      Идет обработка: <strong><span>98</span>%</strong>
+                    </p>
+                  </div>
+                </div>
+                <span class="accordion__close" title="Закрыть"></span>
+              </section>
+              <div class="toolbar">
+                <button class="btn" data-type="secondary">
+                  Отменить подписание
+                </button>
+                <button class="btn" data-type="primary">Подписать ЭП</button>
+              </div>
+            </div>
+          </section>
+          <section class="accordion-count">
+            <h2 class="accordion-count__head">Подписанные: <span>3</span></h2>
+            <div class="accordion-count__body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
+              quibusdam.
+            </div>
+          </section>
+          <section class="accordion-count">
+            <h2 class="accordion-count__head">Отмененные: <span>2</span></h2>
+            <div class="accordion-count__body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
+              quibusdam.
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"></script>
+    <script>
+      $(function () {
+        function triggerWinResize(timeout) {
+          setTimeout(function () {
+            // For a full list of event types: https://developer.mozilla.org/en-US/docs/Web/API/document.createEvent
+            var el = window; // This can be your element on which to trigger the event
+            var event = document.createEvent("HTMLEvents");
+
+            event.initEvent("resize", true, false);
+            el.dispatchEvent(event);
+          }, timeout);
+        }
+
+        $(".accordion__head").click(function (e) {
+          e.preventDefault();
+
+          $(this)
+            .next()
+            .slideToggle(400)
+            .parent()
+            .toggleClass("accordion--expanded");
+
+          triggerWinResize(450);
+        });
+
+        $(".accordion-count__head").click(function (e) {
+          e.preventDefault();
+
+          $(this)
+            .next()
+            .slideToggle(400)
+            .parent()
+            .toggleClass("accordion-count--expanded");
+
+          triggerWinResize(450);
+        });
+
+        $(".modal__bg, .modal__close").click(function (e) {
+          e.preventDefault();
+          $(this).closest(".modal").fadeToggle(400);
+        });
+
+        $(".file-list li").hover(
+          function (event) {
+            // over
+            var $target = $(this);
+            var $tooltip = $target.find(".tooltip-modal");
+
+            var position = {
+              y: $target[0].getBoundingClientRect().top,
+              x: event.originalEvent.pageX,
+            };
+
+            $tooltip
+              .css({
+                top: position.y + $target.height() + "px",
+                left: position.x - 50 + "px",
+              })
+              .fadeIn(300);
+          },
+          function (event) {
+            // out
+            var $target = $(this);
+            var $tooltip = $target.find(".tooltip-modal");
+
+            $tooltip.fadeOut(300);
+          }
+        );
+
+        setTimeout(function () {
+          var $pagebleBlock = document.querySelector("#pageble-block");
+          var $modal = document.querySelector(".modal");
+
+          var psPagebleBlock = new PerfectScrollbar($pagebleBlock);
+          var psModal = new PerfectScrollbar($modal);
+
+          $(window).resize(function () {
+            psPagebleBlock.update();
+            psModal.update();
+          });
+        }, 100);
+      });
+    </script>
+  </body>
+</html>

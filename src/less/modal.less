@@ -9,16 +9,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &.ps--active-y {
+    align-items: flex-start;
+  }
 
   &__bg {
-    height: 100%;
-    width: 100%;
     min-width: 320px;
     position: absolute;
     z-index: 10;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    right: 0;
   }
 
   &__box {
@@ -32,9 +37,9 @@
     background-color: #ffffff;
     padding-bottom: 20px;
     max-width: calc(100vw - 100px);
-    max-height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
   }
 
   &__head {

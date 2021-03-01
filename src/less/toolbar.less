@@ -1,0 +1,14 @@
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .btn + .btn {
+    margin-left: 10px;
+  }
+}

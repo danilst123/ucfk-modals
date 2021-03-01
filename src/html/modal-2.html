@@ -16,7 +16,7 @@
           <h2 class="modal__title">Выберите сертификат</h2>
           <div class="modal__close"></div>
         </div>
-        <div id="modalBody" class="modal__body">
+        <div class="modal__body">
           <section class="choose-block">
             <label class="choose-block__item">
               <input class="choose-block__input" type="radio" name="choose" />
@@ -73,6 +73,97 @@
                 </table>
               </div>
             </label>
+            <label class="choose-block__item">
+              <input class="choose-block__input" type="radio" name="choose" />
+              <div class="certificate-card certificate-card--active">
+                <h3 class="certificate-card__name">Иванов Иван Иванович</h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>29.01.2021</td>
+                  </tr>
+                </table>
+              </div> </label
+            ><label class="choose-block__item">
+              <input class="choose-block__input" type="radio" name="choose" />
+              <div class="certificate-card certificate-card--active">
+                <h3 class="certificate-card__name">Иванов Иван Иванович</h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>29.01.2021</td>
+                  </tr>
+                </table>
+              </div> </label
+            ><label class="choose-block__item">
+              <input class="choose-block__input" type="radio" name="choose" />
+              <div class="certificate-card certificate-card--active">
+                <h3 class="certificate-card__name">Иванов Иван Иванович</h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>29.01.2021</td>
+                  </tr>
+                </table>
+              </div> </label
+            ><label class="choose-block__item">
+              <input class="choose-block__input" type="radio" name="choose" />
+              <div class="certificate-card certificate-card--active">
+                <h3 class="certificate-card__name">Иванов Иван Иванович</h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>29.01.2021</td>
+                  </tr>
+                </table>
+              </div> </label
+            ><label class="choose-block__item">
+              <input class="choose-block__input" type="radio" name="choose" />
+              <div class="certificate-card certificate-card--active">
+                <h3 class="certificate-card__name">Иванов Иван Иванович</h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>29.01.2021</td>
+                  </tr>
+                </table>
+              </div> </label
+            ><label class="choose-block__item">
+              <input class="choose-block__input" type="radio" name="choose" />
+              <div class="certificate-card certificate-card--active">
+                <h3 class="certificate-card__name">Иванов Иван Иванович</h3>
+                <table class="certificate-card__info">
+                  <tr>
+                    <td>Издатель:</td>
+                    <td>ООО “Ромашка”</td>
+                  </tr>
+                  <tr>
+                    <td>Действителен:</td>
+                    <td>29.01.2021</td>
+                  </tr>
+                </table>
+              </div>
+            </label>
           </section>
         </div>
         <div class="modal__footer">
@@ -103,11 +194,11 @@
         });
 
         setTimeout(function () {
-          var $modalBody = document.querySelector("#modalBody");
-          var psModalBody = new PerfectScrollbar($modalBody);
+          var $modal = document.querySelector(".modal");
+          var psModal = new PerfectScrollbar($modal);
 
           $(window).resize(function () {
-            psModalBody.update();
+            psModal.update();
           });
         }, 100);
       });

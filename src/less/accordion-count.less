@@ -1,0 +1,50 @@
+.accordion-count {
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(45, 45, 45, 0.2);
+  }
+
+  &__head {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: @main_font;
+    font-size: 26px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2d2d2d;
+    margin: 0;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 11px;
+      background-image: url("../img/chevron-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: transform 0.3s;
+      margin-right: 12px;
+      margin-top: 5px;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  &--expanded &__head::before {
+    transform: rotateX(180deg);
+  }
+
+  &__body {
+    display: none;
+    padding-bottom: 20px;
+  }
+}
