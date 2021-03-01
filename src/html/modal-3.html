@@ -193,6 +193,19 @@
                       >
                     </li>
                   </ul>
+
+                  <section class="modal modal--inner" style="display: none">
+                    <div class="modal__bg"></div>
+                    <div class="modal__box" style="width: 440px">
+                      <p class="modal__text">
+                        Вы уверены, что хотите остановить процесс подписания?
+                      </p>
+                      <div class="toolbar">
+                        <button class="btn" data-type="primary">Да</button>
+                        <button class="btn" data-type="secondary">Нет</button>
+                      </div>
+                    </div>
+                  </section>
                 </div>
                 <div class="accordion__status">
                   <span class="status-label" data-status="complete">
@@ -374,6 +387,12 @@
             .toggleClass("accordion-count--expanded");
 
           triggerWinResize(450);
+        });
+
+        $(".accordion__close").click(function (e) {
+          e.preventDefault();
+
+          $(this).closest(".accordion").find(".modal--inner").fadeToggle(400);
         });
 
         $(".modal__bg, .modal__close").click(function (e) {
